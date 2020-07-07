@@ -13,17 +13,25 @@
   font-size: 90px;
   border: 10px solid black;
   position: absolute; /* Stay fixed */
-  top: 1px;
+  top: 1%;
   left: 40%;
   z-index: 2;
-  width: 500px;
-  padding: 20px;
+  width: 30%;
+  padding: 10px;
   text-align: center;
 }
 
+.closeup-pic {
+  border-radius:50%;
+  float:left;
+  padding: 20px;
+}
+
+
+
 /* The side navigation menu */
 .sidebar {
-  border-radius: 15px;
+  border-radius: 5px;
   margin: 0;
   padding: 0;
   width: 12%;
@@ -51,16 +59,31 @@
 
 /* Links on mouse-over */
 .sidebar a:hover:not(.active) {
-  background-color: #555;
+  background-color: #025;
   color: white;
 }
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
-  margin-left: 12%;
+  margin-left: 12.5%;
+  width:87%;
   padding: 0px 1px;
+  font-size: 20px;
 }
 
+div.content a:link {
+  color: white;
+  font-weight:bold;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+div.content a:visited {
+  color: white;
+  font-weight:bold;
+  background-color: transparent;
+  text-decoration: underline;
+}
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 700px) {
   .sidebar {
@@ -80,3 +103,38 @@ div.content {
   }
 } 
 
+.center {
+  display: block;
+  margin-left: 30%;
+  margin-right: auto;
+  width: 30%;
+}
+
+/* For the thoughtbox page */
+
+.thumbnail {
+  position: relative;
+  -ms-zoom: 0.55;
+  -moz-transform: scale(0.55);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.55);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.55);
+  -webkit-transform-origin: 0 0;
+}
+
+.thumbnail:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.thumbnail iframe {
+  width: 60%;
+  height: 500px;
+  overflow: hidden;
+}
