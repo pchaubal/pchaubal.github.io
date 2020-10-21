@@ -3,23 +3,47 @@ html{
   scroll-behavior: smooth;
 }
 
+body{
+width:100%;
+height: 100%;
+}
+
 .header {
-  background-color: #F1F1F1;
+  background-color: white;
   text-align: center;
   padding: 20px;
 }
+
+:is (h1,h2,h3){
+    font-family:"Alegreya";
+    font-style: serif;
+}
+
+blockquote{
+    font-family:'Courgette';
+    font-style: cursive;
+    align: center;
+    font-size: 30px;
+    margin-left: 15%;
+    padding: 25px;
+}
+
+
 
 /* Position text in the middle of the page/image */
 .bg-text {
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
   color: white;
+  margin-left: 14.0%;
+  font-family:"Alegreya";
+  font-style: serif;
   font-weight: normal;
-  font-size: 60px;
+  font-size: 70px;
   border: 10px solid black;
   position: absolute; /* Stay fixed */
   top: 1%;
-  left: 40%;
+  left: 30%;
   z-index: 2;
   width: auto;
   padding: 10px;
@@ -27,9 +51,7 @@ html{
 }
 
 .bg-text h1{
-  font-family:"Merriweather","Josefin Slab","Garamond,Baskerville";
-  font-style: normal;
-  font-variant: normal;
+  text-align: center;
 }
 
 .closeup-pic {
@@ -40,82 +62,159 @@ html{
 
 /* The side navigation menu */
 .sidebar {
-  border-radius: 5px;
-  margin: 0;
-  padding: 0;
-  width: 10%;
+  border-radius: 1%;
+  margin: 0.5%;
+  padding: 0%;
+  width: 12%;
   background-color: black;
   position: fixed;
   height: 100%;
   overflow: fixed;
-  text-align: center;
-  font-family:"Merriweather","Book Antiqua";
+  text-align: left;
+  text-indent:1.5%;
+  font-family:"Alegreya";
+  font-style: normal;
+  font-size:24px;
+  line-height: 35px;
 }
 
 /* Sidebar links */
 .sidebar a {
   display: block;
-  border-radius:5%;
+  border-radius:9%;
   color: white;
-  padding: 16px;
   text-decoration: none;
-  font-size:20px;
-  font-family: Merriweather;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  line-height: 29px;
 }
 
+.sidebar ul {
+    list-style-type: none;
+    font-size:24px;
+}
+
+.sidebar ol {
+    list-style-type: none;
+}
+.sidebar li {
+    bottom-margin:5px;
+}
 /* Active/current link */
 .sidebar a.active {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   font-weight: bold;
-  font-size:22px;
 }
 
 /* Links on mouse-over */
 .sidebar a:hover:not(.active) {
   color: white;
   font-weight: bold;
-  font-size:22px;
 }
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
-  margin-left: 14.0%;
-  width:75%;
+  margin-left: 13.0%;
+  max-width:87%;
+  height:auto;
   padding: 0px 1px;
-  font-size: 18px;
+  font-size: 22px;
+  font-family: "Alegreya";
+  font-style: normal;
+  font-variant: serif;
   line-height: 29px;
   text-align:justify;
   text-justify: inter-word;
 }
+
+img.bgimg{
+    width: 100%;
+    margin-left:0%;
+    margin-top:-10px;
+}
+
+img.fig{
+    width:60%;
+    margin-left:20%;
+    margin-right:auto;
+}
+
+/*figure {
+    display: inline-block;
+}
+*/
+figure figcaption {
+    padding: 10px;
+    border: 1px dotted blue;
+    text-align: justify;
+}
+
+
 div.content p {
-  font-family: Merriweather;
-  font-style: normal;
-  font-variant: normal;
-  line-height: 29px;
+  line-height: 35px;
+  width:70%;
+  margin-right:auto;
+  margin-left:auto;
+  font-size: 24px;
 }
 
 div.content li {
-  margin-left: 5%;
+  margin-left: 15%;
+  margin-bottom: 10px;
 }
 
-div.content a:link {
-  color: white;
-  font-weight:bold;
-  background-color: transparent;
+div.content :is(h1, h2, h3, h4, h5, h6) {
+    margin-left: 10%;
+    padding:15px;
+}
+
+div.content blockquote {
+    text-align:center;
+    margin-left:15%;
+    margin-right:15%;
+}
+
+
+/*div.content a:link {
+  color: blue;
   text-decoration: underline;
 }
 
 div.content a:visited {
-  color: white;
+  color: red;
+  font-weight:bold;
+  text-decoration: underline;
+}
+*/
+
+div.narrow {
+  font-family: "Alegreya";
+  font-style: normal;
+  font-variant: serif;
+  line-height: 30px;
+  margin-right:35%;
+  margin-left:15%;
+  font-size: 24px;
+}
+
+div.narrow a:link {
+  color: blue;
   font-weight:bold;
   background-color: transparent;
   text-decoration: underline;
 }
+
+div.narrow a:visited {
+  color: red;
+  font-weight:normal;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+div.narrow li{
+    margin-bottom: 25px;
+}
+
+
+
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 700px) {
   .sidebar {
