@@ -7,6 +7,7 @@ body{
 width:100%;
 height:100%;
 background: #f2f2f2;
+overflow-x: hidden;
 }
 
 .header {
@@ -15,7 +16,7 @@ background: #f2f2f2;
   padding: 20px;
 }
 
-:is (h1,h2,h3){
+:is (h1,h2,h3,h4,h5,h6){
     font-family:"Alegreya";
     font-style: serif;
 }
@@ -141,67 +142,54 @@ div.content {
   background: white;
 }
 
-img.bgimg{
-    width: 100%;
-    margin-left:0%;
-    margin-top:-10px;
-}
-
-img.fig{
-    width:60%;
-    margin-left:20%;
-    margin-right:auto;
-}
-
-/*figure {
-    display: inline-block;
-}
-*/
-figure.figcaption {
-    padding: 10px;
-    border: 1px dotted blue;
-    text-align: justify;
-}
-
-
 div.content p {
   line-height: 150%;
   width:80%;
   margin-right:auto;
   margin-left:auto;
-  font-size: 150%;
+  font-size: 130%;
 }
 
-div.content li {
+div.content ul {
   margin-left: 15%;
+  margin-right: 15%;
   margin-bottom: 10px;
+  line-height:150%;
+  font-size: 130%;
 }
 
-div.content :is(h2, h3, h4, h5, h6) {
+div.content ol {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 10px;
+  line-height:150%;
+  font-size: 130%;
+}
+
+div.content h1 {
+    margin-left: 0%;
+    font-size:300%;
+    padding:35px;
+    text-align:center;
+}
+div.content h2 {
     margin-left: 2%;
     font-size:250%;
     padding:35px;
     text-align:left;
 }
 
+div.content  h3{
+    margin-left: 2%;
+    font-size:200%;
+    padding:35px;
+    text-align:left;
+}
 div.content blockquote {
     text-align:center;
     margin-left:15%;
     margin-right:15%;
 }
-
-
-/*div.content a:link {
-  color: blue;
-  text-decoration: underline;
-}
-
-div.content a:visited {
-  color: red;
-  font-weight:bold;
-  text-decoration: underline;
-}
-*/
 
 div.narrow {
   font-family: "Alegreya";
@@ -231,6 +219,25 @@ div.narrow li{
     margin-bottom: 25px;
 }
 
+img.fig{
+    width:60%;
+    margin-left:20%;
+    margin-right:auto;
+}
+
+/*figure {
+    display: inline-block;
+}
+*/
+figure figcaption {
+    padding: 10px;
+    margin-left: 10%;
+    margin-right:10%;
+    border: 1px dotted blue;
+    text-align: justify;
+    line-height:150%;
+    font-size: 130%;
+}
 
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
@@ -242,6 +249,7 @@ div.narrow li{
   }
   .sidebar a {float: left;}
   div.content {margin-left: 0;}
+  div.content h1{font-size: 50%;}
 }
 
 /* On screens that are less than 450px, display the bar vertically, instead of horizontally */
@@ -252,23 +260,17 @@ div.narrow li{
   }
 } 
 
-.center {
-  display: block;
-  margin-left: 30%;
-  margin-right: auto;
-  width: 30%;
-}
 
 /* For the thoughtbox page */
 
 .thumbnail {
   position: relative;
-  -ms-zoom: 0.55;
-  -moz-transform: scale(0.55);
+  -ms-zoom: 0.45;
+  -moz-transform: scale(0.45);
   -moz-transform-origin: 0 0;
-  -o-transform: scale(0.55);
+  -o-transform: scale(0.45);
   -o-transform-origin: 0 0;
-  -webkit-transform: scale(0.55);
+  -webkit-transform: scale(0.45);
   -webkit-transform-origin: 0 0;
 }
 
@@ -283,7 +285,7 @@ div.narrow li{
 }
 
 .thumbnail iframe {
-  width: 60%;
-  height: 500px;
+  width: 80%;
+  height: 600px;
   overflow: hidden;
 }
