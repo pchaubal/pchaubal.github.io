@@ -21,14 +21,6 @@ overflow-x: hidden;
     font-style: serif;
 }
 
-blockquote{
-    font-family:'Courgette';
-    font-style: cursive;
-    align: center;
-    font-size: 30px;
-    margin-left: 15%;
-    padding: 25px;
-}
 
 
 
@@ -144,10 +136,10 @@ div.content {
 
 div.content p {
   line-height: 150%;
-  width:80%;
+  width:90%;
   margin-right:auto;
   margin-left:auto;
-  font-size: 130%;
+  font-size: 150%;
 }
 
 div.content ul {
@@ -155,7 +147,7 @@ div.content ul {
   margin-right: 15%;
   margin-bottom: 10px;
   line-height:150%;
-  font-size: 130%;
+  font-size: 150%;
 }
 
 div.content ol {
@@ -163,7 +155,7 @@ div.content ol {
   margin-right: 15%;
   margin-bottom: 10px;
   line-height:150%;
-  font-size: 130%;
+  font-size: 150%;
 }
 
 div.content h1 {
@@ -185,11 +177,25 @@ div.content  h3{
     padding:35px;
     text-align:left;
 }
+
+div.content  h4{
+    margin-left: 2%;
+    font-size:150%;
+    padding:35px;
+    text-align:left;
+}
 div.content blockquote {
     text-align:center;
     margin-left:15%;
     margin-right:15%;
+    font-family:'Courgette';
+    font-style: cursive;
+    align: center;
+    font-size: 30px;
+    margin-left: 15%;
+    padding: 25px;
 }
+
 
 div.narrow {
   font-family: "Alegreya";
@@ -241,7 +247,7 @@ figure figcaption {
 
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 770px) {
   .sidebar {
     width: 100%;
     height: auto;
@@ -265,12 +271,12 @@ figure figcaption {
 
 .thumbnail {
   position: relative;
-  -ms-zoom: 0.45;
-  -moz-transform: scale(0.45);
+  -ms-zoom: 0.55;
+  -moz-transform: scale(0.55);
   -moz-transform-origin: 0 0;
-  -o-transform: scale(0.45);
+  -o-transform: scale(0.55);
   -o-transform-origin: 0 0;
-  -webkit-transform: scale(0.45);
+  -webkit-transform: scale(0.55);
   -webkit-transform-origin: 0 0;
 }
 
@@ -285,7 +291,7 @@ figure figcaption {
 }
 
 .thumbnail iframe {
-  width: 80%;
-  height: 600px;
+  width: 100%;
+  height: 400px;
   overflow: hidden;
 }
