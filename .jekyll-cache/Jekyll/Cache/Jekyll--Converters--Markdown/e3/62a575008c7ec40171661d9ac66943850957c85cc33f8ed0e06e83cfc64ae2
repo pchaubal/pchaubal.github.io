@@ -1,0 +1,29 @@
+I"8<h1 id="a-collection-of-some-of-the-most-interesting-pages">A collection of some of the most interesting pages</h1>
+
+<h2 id="algorithms">Algorithms</h2>
+<ul>
+  <li><a href="https://timmmm.github.io/fast-inverse-square-root/">Fast inverse square</a></li>
+  <li><a href="https://www.techiedelight.com/">One of the best resource on algorithms an data structures</a></li>
+  <li><a href="https://stackoverflow.com/questions/500607/what-are-the-lesser-known-but-useful-data-structures?page=1&amp;tab=votes#tab-top">More on datastructures from stackexchange</a></li>
+  <li><a href="https://apetresc.wordpress.com/2010/10/25/the-knight-metric/">A metric for knight’s move. No breadth first, depth first, Dijkstra or A-star</a>. Why think the computer science way when you can think like a Physicist?</li>
+  <li><a href="https://jakevdp.github.io/PythonDataScienceHandbook/05.11-k-means.html">Jake Vanderplas’ post on K-means clustering</a></li>
+  <li><a href="https://towardsdatascience.com/the-concave-hull-c649795c0f0f">A convex hull algorithm</a></li>
+</ul>
+
+<h2 id="blogs">Blogs</h2>
+<ul>
+  <li><a href="https://www.inference.vc/">Ferenc Huszar’s blog</a></li>
+</ul>
+
+<h2 id="softwares">Softwares</h2>
+<h2 id="python">Python</h2>
+<ul>
+  <li><a href="https://tenthousandmeters.com/blog/python-behind-the-scenes-4-how-python-bytecode-is-executed/">How Python byte code is executed</a></li>
+  <li><a href="https://www.maartenbreddels.com/perf/jupyter/python/tracing/gil/2021/01/14/Tracing-the-Python-GIL.html">Tracing and visualizing the Python GIL with perf and VizTracer</a></li>
+  <li><a href="https://www.artima.com/weblogs/viewpost.jsp?thread=236275">Python super - one of the trickiest python constructs</a></li>
+  <li><a href="https://github.com/emeryberger/scalene">Scalene: An amazing python profiler</a></li>
+</ul>
+
+<h2 id="vim">VIM</h2>
+
+:ET

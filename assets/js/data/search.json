@@ -1,18 +1,18 @@
 [
   
   {
-    "title": "Welcome to Jekyll!",
-    "url": "/posts/welcome-to-jekyll/",
-    "categories": "jekyll, update",
+    "title": "Computers, Codes and Programming",
+    "url": "/posts/curated-list/",
+    "categories": "CuratedLists",
     "tags": "",
-    "date": "2021-07-07 11:25:30 +0800",
+    "date": "2021-07-08 14:05:30 +1000",
     
 
 
 
 
 
-    "snippet": "You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.Jekyll..."
+    "snippet": "A collection of some of the most interesting pagesAlgorithms  Fast inverse square  One of the best resource on algorithms an data structures  More on datastructures from stackexchange  A metric for knight’s move. No breadth first, depth first, Dijkstra or A-star. Why think the computer science wa..."
   }
   
 ]
