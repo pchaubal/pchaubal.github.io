@@ -5,6 +5,8 @@ date:   2021-07-08 14:05:30 +1000
 categories: CuratedLists
 ---
 # A collection of some of the most interesting pages
+This is a collection of some of the most interesting pages that I have found while browsing through the internet. Quite a lot of these pages taught me something new and I hope you will like it too.
+I will keep on updating this page by adding new items whenever I find anything interesting.
 
 ## Algorithms
 - [An almost exhaustive library of Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
