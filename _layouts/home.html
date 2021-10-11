@@ -7,7 +7,7 @@ layout: page
 <div class="post-content">
 
     {% if page.image.src %}
-      <img src="{{ page.image.src }}" class="preview-img" alt="{{ page.image.alt | default: "Preview Image" }}">
+      <img src="{{ page.image.src }}" class="preview-img" alt="{{ page.image.alt }}">
     {% endif %}
     {{ content }}
 </div>
