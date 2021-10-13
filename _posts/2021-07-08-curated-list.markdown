@@ -7,8 +7,10 @@ categories: CuratedLists
 # A collection of some of the most interesting pages
 This is a collection of some of the most interesting pages that I have found while browsing through the internet. Quite a lot of these pages taught me something new and I hope you will like it too.
 I will keep on updating this page by adding new items whenever I find anything interesting.
+
 ## HPC
 - [Victor Eijkhout's book on HPC. A must read before buring millions of CPU hours](https://pages.tacc.utexas.edu/~eijkhout/istc/istc.html)
+
 ## Algorithms
 - [An almost exhaustive library of Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
 - [Fast inverse square](https://timmmm.github.io/fast-inverse-square-root/)
@@ -22,12 +24,10 @@ I will keep on updating this page by adding new items whenever I find anything i
 ## Blogs
 - [Ferenc Huszar's blog](https://www.inference.vc/)
 
-## Softwares
 ## Python
  - [How Python byte code is executed](https://tenthousandmeters.com/blog/python-behind-the-scenes-4-how-python-bytecode-is-executed/)
  - [Tracing and visualizing the Python GIL with perf and VizTracer](https://www.maartenbreddels.com/perf/jupyter/python/tracing/gil/2021/01/14/Tracing-the-Python-GIL.html)
  - [Python super - one of the trickiest python constructs](https://www.artima.com/weblogs/viewpost.jsp?thread=236275)
  - [Scalene: An amazing python profiler](https://github.com/emeryberger/scalene)
  - [Async programming to make http requests](https://pawelmhm.github.io/asyncio/python/aiohttp/2016/04/22/asyncio-aiohttp.html)
-## VIM
 
