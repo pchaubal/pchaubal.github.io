@@ -7,7 +7,8 @@ categories: CuratedLists
 # A collection of some of the most interesting pages
 This is a collection of some of the most interesting pages that I have found while browsing through the internet. Quite a lot of these pages taught me something new and I hope you will like it too.
 I will keep on updating this page by adding new items whenever I find anything interesting.
-
+## HPC
+- [Victor Eijkhout's book on HPC. A must read before buring millions of CPU hours](https://pages.tacc.utexas.edu/~eijkhout/istc/istc.html)
 ## Algorithms
 - [An almost exhaustive library of Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
 - [Fast inverse square](https://timmmm.github.io/fast-inverse-square-root/)
