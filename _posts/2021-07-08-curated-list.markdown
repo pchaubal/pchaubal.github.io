@@ -25,9 +25,15 @@ I will keep on updating this page by adding new items whenever I find anything i
 - [Ferenc Huszar's blog](https://www.inference.vc/)
 
 ## Python
+ -  [Decorators for Data Scientists](https://bytepawn.com/python-decorators-for-data-scientists.html)
  - [How Python byte code is executed](https://tenthousandmeters.com/blog/python-behind-the-scenes-4-how-python-bytecode-is-executed/)
  - [Tracing and visualizing the Python GIL with perf and VizTracer](https://www.maartenbreddels.com/perf/jupyter/python/tracing/gil/2021/01/14/Tracing-the-Python-GIL.html)
  - [Python super - one of the trickiest python constructs](https://www.artima.com/weblogs/viewpost.jsp?thread=236275)
  - [Scalene: An amazing python profiler](https://github.com/emeryberger/scalene)
  - [Async programming to make http requests](https://pawelmhm.github.io/asyncio/python/aiohttp/2016/04/22/asyncio-aiohttp.html)
 
+## Linux
+ - [Linux performance tools](https://www.brendangregg.com/linuxperf.html)
+
+## Networking
+ - [How to avoid bot detection while scraping ](https://github.com/niespodd/browser-fingerprinting)

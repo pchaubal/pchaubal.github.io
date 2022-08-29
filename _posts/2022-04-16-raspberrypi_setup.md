@@ -32,6 +32,12 @@ PasswordAuthentication no
 
 and then restart the ssh service through systemd with 
 
+# Change default shell to `bash`
+
+```console
+chsh
+```
+
 ```console
 $ sudo systemctl restart ssh
 ```
@@ -59,13 +65,54 @@ $ sudo cp btop/bin/btop /usr/bin
 ```
 
 # Miniconda
-Conda does not currently provide `arm/aarch` prebuilt binaries. However, the `conda-forge` packages work. Download the
+Conda does not currently provide `arm/aarch` pre-built binaries. However, the `conda-forge` packages work. Download the
 `aarch` package from <https://github.com/conda-forge/miniforge/#download>.
 
 # Make new users
+To make a new user in Linux, the syntax is 
 
+```console
+sudo useradd -m username
+```
+This creates a new user with default settings defined in `/etc/default/useradd`. The `m` flag creates a home directory for the user.
+We don''t want to give admin rights to all the users. To do this we can create groups such that users
+of each group have a limited set of predefined privileges.
+A new group with name `groupname` is created with 
+```console
+sudo groupadd groupname
+```
+We can then add new users to this group with 
+```console
+sudo usermed -a groupname username
+```
+Finally, to allow them access to the device with ssh-keys, make a `.ssh` directory in their home
+directory and add their public key to the `authorized_keys` file. This directory is created by the
+root user and will not have proper permissions. Set the correct permissions with 
+
+```console
+sudo chmod 700 /home/username/.ssh
+sudo chmod 600 /home/username/.ssh/authorized_keys
+```
+and then change the ownership of the `.ssh` and all its contents recursively with
+```console
+sudo chown -R username:group /home/user/username/.ssh
+```
+Now your new user can sign-in to your device with their ssh key.
 # Mount drives
-
+To mount a drive, first make a new directory where the drive will be mounted. I prefer to make it in the top level directory.
+```console
+sudo mkdir /drive1
+```
+Then, find the name of the drive with `lsblk`. 
+Finally, mount it with
+```console
+sudo mount -t ext4 /dev/sda1 /drive1/
+```
+To mount the drive at boot, find its uuid with `sudo blkid`.
+Then add the following line to `/etc/fstab`:
+```console
+UUID=<uuid> <pathtomount> <filesystem> defaults 0 0
+```
 # Neovim
 ```console
  $ sudo add-apt-repository ppa:neovim-ppa/unstable
@@ -79,5 +126,22 @@ sudo apt install wireguard
 ```
 
 # Increase swap
+```console
+# Turn swap off
+# This moves stuff in swap to the main memory and might take several minutes
+sudo swapoff -a
+
+# Create an empty swapfile
+# Note that "1G" is basically just the unit and count is an integer.
+# Together, they define the size. In this case 8GB.
+sudo dd if=/dev/zero of=/swapfile bs=1G count=8
+# Set the correct permissions
+sudo chmod 0600 /swapfile
+
+sudo mkswap /swapfile  # Set up a Linux swap area
+sudo swapon /swapfile  # Turn the swap on
+```
+
+Add `/swapfile swap swap sw 0 0` to your `/etc/fstab` to make it load at boot.
 
 
