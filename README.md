@@ -12,7 +12,7 @@ To run the container, use
 ```
 sudo docker run -it --rm \
     -v "$PWD:/mysite" \
-    -p 4000:4000 \ 
+    -p 4000:4000 \
     jekyll_pc
 ```
 The website should be visible on localhost:4000
