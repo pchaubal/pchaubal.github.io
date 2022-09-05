@@ -11,4 +11,3 @@ COPY . /mysite
 WORKDIR /mysite
 RUN gem install jekyll bundler
 RUN bundle install 
-CMD bundle exec jekyll serve
