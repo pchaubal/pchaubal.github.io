@@ -10,7 +10,7 @@ sudo docker build -t jekyll_pc .
 ```
 To run the container, use
 ```
-sudo docker run -it --rm \
+sudo docker run -it --entrypoint=/bin/bash --rm \
     -v "$PWD:/mysite" \
     -p 4000:4000 \
     jekyll_pc

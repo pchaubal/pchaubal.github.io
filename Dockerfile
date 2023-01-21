@@ -9,7 +9,8 @@ RUN echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc \
 RUN mkdir /mysite
 COPY . /mysite
 WORKDIR /mysite
-RUN gem install jekyll bundler
+RUN gem install jekyll --version="~> 4.2.0"
+Run gem install bundler
 RUN bundle install 
 RUN echo 'alias serve="bundle exec jekyll serve --host 0.0.0.0"' >> ~/.bashrc \
     source ~/.bashrc
