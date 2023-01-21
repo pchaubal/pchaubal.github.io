@@ -11,3 +11,7 @@ COPY . /mysite
 WORKDIR /mysite
 RUN gem install jekyll bundler
 RUN bundle install 
+RUN echo 'alias serve="bundle exec jekyll serve --host 0.0.0.0"' >> ~/.bashrc \
+    source ~/.bashrc
+CMD echo 'Start jekyll server with - serve'
+

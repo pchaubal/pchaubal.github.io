@@ -15,4 +15,8 @@ sudo docker run -it --rm \
     -p 4000:4000 \
     jekyll_pc
 ```
+Serve the website with 
+```
+bundle exec jekyll serve --host 0.0.0.0
+```
 The website should be visible on localhost:4000
