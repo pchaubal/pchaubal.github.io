@@ -5,6 +5,6 @@ order: 5
 ---
 The best way to get in touch with me is via email. 
 
-Send me an email at [prakrutchaubal@gmail.com](mailto:prakrutchuabal@gmail.com)
+Send me an email at [pchaubal@cosmosinquiry.com](mailto:pchaubal@cosmosinqiury.com)
 
-You can also contact me on [Linkedin](https://www.linkedin.com/in/prakrut-chaubal-033435238/)
+You can also find me on [Linkedin](https://www.linkedin.com/in/prakrut-chaubal/)
