@@ -1,6 +1,6 @@
 ---
 title: Publications
-icon: fas fa-stream
+icon: fas fa-file
 math: true
 order: 4
 ---
