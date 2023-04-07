@@ -7,9 +7,11 @@ layout: page
 <div class="post-content">
 
     {% if page.image.src %}
-      <img src="{{ page.image.src }}" class="preview-img" alt="{{ page.image.alt }}">
+        {% if paginator.page == 1 %}
+            <img src="{{ page.image.src }}" class="preview-img" alt="{{ page.image.alt }}">
+            {{ content }}
+        {% endif %}
     {% endif %}
-    {{ content }}
 </div>
 
 {% assign pinned = site.posts | where_exp: "item", "item.pin == true"  %}
@@ -50,7 +52,7 @@ layout: page
 
 <div id="post-list">
 
-{% for post in posts %}
+{% for post in posts limit:3 %}
 
   <div class="post-preview">
     <h1>
