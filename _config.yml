@@ -3,7 +3,8 @@
 # Import the theme
 theme: jekyll-theme-chirpy
 
-domain: cosmosinquiry.com
+domain: pchuabal@github.io
+# domain: cosmosinquiry.com
 
 # Only if your site type is GitHub Project sites and doesn't have a custom domain,
 # change below value to '/projectname'.
