@@ -7,6 +7,9 @@
 */
 $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
 
+// p { font-size: 26px; /* Change this value to adjust font size */ }
+
+
 @import "{{ site.theme }}";
 
 /* append your custom style below */
