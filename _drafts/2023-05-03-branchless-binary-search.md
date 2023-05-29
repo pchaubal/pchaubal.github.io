@@ -21,11 +21,11 @@ I had a few specific questions to answer with this exercise:
 3. Does Julia create an optimized assembly code?
 4. How does it compare against Julia's inbuilt `searchsorted` function?
 
-For the impatient reader, jump to [Results](#Results) and then go back to whichever code that piques your interest in [codes](#The codes) and some further disection in [Comparing Assembly Codes](#Comparing Assembly) and [Profiling](#Profiling).
+For the impatient reader, jump to [Results](#results) and then go back to whichever code that piques your interest in [codes](#codes) and some further disection in [Comparing Assembly Codes](#comparingassembly) and [Profiling](#profiling).
 
 > tldr; A naive implementation with conditional statements works much faster than even C++ code due to compiler magic.
 
-# The codes
+# <a name="codes"></a> The codes
 ## Branchless codes
 ### Direct translation of branchless binary Python code into Julia code
 ```julia
@@ -144,10 +144,13 @@ function bisect_op(arr::Vector{Int}, target::Int)::Int
     return left
 end
 ```
-# Results
+# <a name="Results"></a> Results
 ## Julia codes
 ## Comparing with Python and C++ codes
-# Comparing Assembly
+
+
+# <a name="comparingassembly"></a> Comparing Assembly
+
 
 # Benchmark Results
 ## Branchless
@@ -160,6 +163,8 @@ end
 ![Julia Native Binary Search](/images/binary_search/julia_native.png)
 ## Optimized Conditional version
 ![Optimized Binary Search](/images/binary_search/bisect_opt.png)
+
+
 # Closing Remarks
 I am sure I am being stupid in the branchless code and it would be great if someone points out how to make it faster. If you are someone who can spot my mistakes, please reach out to me. It puzzles me how a branchless code is slower than the one with with a control flow statement. 
 
