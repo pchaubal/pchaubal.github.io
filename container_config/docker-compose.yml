@@ -1,9 +1,0 @@
-services:
-  nginx-server:
-    image: nginx:alpine-slim
-    volumes:
-      - "../_site:/_site"
-      - "./nginx:/etc/nginx"
-    ports:
-      - "5555:80"
-      - "5556:443"
