@@ -8,7 +8,9 @@ refactor: true
 
     {% if page.image.src %}
         {% if paginator.page == 1 %}
-            <img src="{{ page.image.src }}" class="preview-img" alt="{{ page.image.alt }}">
+        <div class="image-container">
+            <img src="{{ page.image.src }}" class="centered-image" alt="{{ page.image.alt }}">
+        </div>
             {{ content }}
         {% endif %}
     {% endif %}
