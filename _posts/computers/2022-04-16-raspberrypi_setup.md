@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How I setup my Raspberry-pi
-author: Prakrut Chaubal
+author: prakrut
 date: 2022-04-16 10:34:30 +1100
 categories: [Computers]
 tags: [raspberry-pi]

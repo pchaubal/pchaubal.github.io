@@ -2,6 +2,7 @@
 layout: post
 title:  "Computers, Codes and Programming"
 date:   2021-07-08 14:05:30 +1000
+author: prakrut
 categories: CuratedLists
 ---
 # A collection of some of the most interesting pages

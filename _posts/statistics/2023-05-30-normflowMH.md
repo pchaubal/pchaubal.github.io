@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Metropolis-Hastings augmented with Normalizing Flows
-author: Prakrut Chaubal
+author: prakrut
 date: 2023-05-30 11:22:00 +1100
 categories: [statistics]
 tags: [stats]

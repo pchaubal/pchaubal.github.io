@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Statistics and Data Science"
-author: Prakrut Chaubal
+author: prakrut
 date:   2021-07-12 14:38:30 +1000
 categories: [CuratedLists]
 tags: [Data Science, Statistics]

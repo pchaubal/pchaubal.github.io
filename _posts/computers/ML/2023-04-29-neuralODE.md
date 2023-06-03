@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Neural ODE solver
-author: Prakrut Chaubal
+author: prakrut
 date: 2023-04-29 14:24:00 +1100
 categories: [Computers, ML]
 tags: [Machine Learning, Physics]

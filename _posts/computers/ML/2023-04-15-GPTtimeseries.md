@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How good is GPT for Time Series analysis?
-author: Prakrut Chaubal
+author: prakrut
 date: 2023-04-15 15:22:30 +1100
 categories: [ML]
 tags: [Machine Learning]

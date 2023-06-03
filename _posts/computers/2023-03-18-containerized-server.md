@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to setup a Docker Nginx server with Grafana monitoring
-author: Prakrut Chaubal
+author: prakrut
 date: 2023-03-18 15:33:30 +1100
 categories: [Computers]
 tags: [raspberry-pi]

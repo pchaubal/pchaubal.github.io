@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Basics of Differential Geometry
-author: Prakrut Chaubal
+author: prakrut
 date: 2022-01-21 10:34:30 +1100
 categories: [Mathematics]
 tags: [geometry]

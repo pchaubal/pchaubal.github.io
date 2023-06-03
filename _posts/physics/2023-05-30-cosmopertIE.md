@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A New Formulation of Cosmological Perturbation Theory
-author: Prakrut Chaubal
+author: prakrut
 date: 2023-05-30 21:18:30 +1100
 categories: [Physics, CMB]
 tags: [GR, CMB]
