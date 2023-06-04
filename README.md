@@ -8,4 +8,4 @@ sudo docker build -t jekyll_pc_2 .
 
 To run it with Docker:
 
-sudo docker run -it --rm     --volume="$PWD:/srv/jekyll"     -p 4000:4000 jekyll_pc_2
+sudo docker run -it --entrypoint=/bin/bash  --rm  --volume="$PWD:/mysite" -p 4000:4000 jekyll_pc_2
