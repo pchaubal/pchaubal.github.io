@@ -25,10 +25,11 @@ RUN gem install rouge -v 4.1.1
 RUN gem install ethon -v 0.16.0
 RUN gem install jekyll -v 4.3.2
 RUN gem install bundler
+RUN export JEKYLL_ENV=production
 RUN bundle exec jekyll build
 WORKDIR /mysite
-RUN echo 'alias serve="JEKYLL_ENV=production bundle exec jekyll serve --host 0.0.0.0"' >> ~/.bashrc
-RUN echo 'alias build_site="JEKYLL_ENV=production bundle exec jekyll build"' >> ~/.bashrc
+RUN echo 'alias serve="bundle exec jekyll serve --host 0.0.0.0"' >> ~/.bashrc
+RUN echo 'alias build_site="bundle exec jekyll build"' >> ~/.bashrc
 CMD chsh -s /bin/bash
 CMD source ~/.bashrc
 RUN echo 'Start jekyll server with - serve'
