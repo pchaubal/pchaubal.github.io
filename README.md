@@ -1,9 +1,11 @@
 This is a repository to host my personal website.
 Checkout my website : https://pchaubal.github.io
 
-Dont know if it works with jekyll.
 
 The rest of information is for my reference in future.
+
+
+The site also comes with a Docker image for local testing before deploying.
 
 Build the image with:
 sudo docker build -t jekyll_pc_2 .
