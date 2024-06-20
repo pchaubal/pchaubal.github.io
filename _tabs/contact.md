@@ -3,8 +3,10 @@ title: Contact
 icon: fas fa-info
 order: 5
 ---
-The best way to get in touch with me is via email. 
+The best way to get in touch with me is via email.
 
-Send me an email at [pchaubal@cosmosinquiry.com](mailto:pchaubal@cosmosinqiury.com)
+Send me an email at [prakrutchaubal@gmail.com](mailto:prakrutchaubal@gmail.com)
 
-You can also find me on [Linkedin](https://www.linkedin.com/in/prakrut-chaubal/)
+You can find me on [github](https://github.com/pchaubal)
+
+My socials: [Linkedin](https://www.linkedin.com/in/prakrut-chaubal/)
