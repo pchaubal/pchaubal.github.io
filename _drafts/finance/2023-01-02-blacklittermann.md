@@ -23,7 +23,7 @@ $$
 \mu = \mathcal{N}(\pi, \Sigma') \ .
 $$
 
-Now, BL take a different approach from the classical Markovitz optimization. BL argue that the market has already allocated assets at the efficient frontier according to Markovitz optimization with some unknown risk aversion level $\bar{\lambda}$ and the expected returns. 
+Now, BL take a different approach from the classical Markovitz optimization. BL argue that the market has already allocated assets at the efficient frontier according to Markovitz optimization with some unknown risk aversion level $\bar{\lambda}$ and the expected returns.
 
 ## The Pick Matrix - $P$
 Usually, we have some opinions about how some securities are going to perform in the future, i.e. what returns $\mu$ we expect from some asset in the future. If we have $V$ such views for $N$ securities ($V \leq N$) then we can represent these views with a ($V \times N$) pick matrix - $P$.
