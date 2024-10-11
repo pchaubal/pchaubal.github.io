@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Resources for Job"
-date:   2024-10-11 11:05:30 +0000
+date:   2024-10-10 11:05:30 +0000
 author: prakrut
 categories: CuratedLists
 ---
