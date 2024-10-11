@@ -9,7 +9,7 @@ order: 5
 ## Visiting Postdoctoral Researcher
 **Kavli Institute of Cosmology**, The University of Cambridge
 
-*April 2024 - Present*
+*April 2024 - July 2024*
 - Bayesian Analysis for CMB secondary anisotropies
 
 ## Graduate Teaching Assistant
