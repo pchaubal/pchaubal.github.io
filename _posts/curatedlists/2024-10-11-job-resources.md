@@ -7,4 +7,4 @@ categories: CuratedLists
 ---
 # A collection of Important Job Resources
 ## Negotiating an Offer
-  - Haseeb Q's 10 points - [https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/]
+  - [Haseeb Q's](https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/) 10 rules for negotiating a job offer
