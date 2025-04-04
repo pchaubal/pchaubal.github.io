@@ -4,7 +4,7 @@ on:
     branches:
       - main
       - master
-      - bug-fix
+      - bug_fix
     paths-ignore:
       - .gitignore
       - README.md
