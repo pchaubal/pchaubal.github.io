@@ -7,12 +7,12 @@ I am a Physicist who got amazed by fancy tools called computers to make physical
 
 ![SPT](/assets/spt.webp)
 
-I did my PhD in [Dr. Christian Reichardt's]("https://pursuit.unimelb.edu.au/individuals/associate-professor-christian-reichardt") [Observational Cosmology]("http://www.ph.unimelb.edu.au/~creichardt/obscos/Welcome.html") group with the [South Pole Telescope]("https://pole.uchicago.edu/public/Home.html") collaboration at the University of Melbourne. I worked on topics related to the [Cosmic Microwave Background]("https://en.wikipedia.org/wiki/Cosmic_microwave_background"). I am generally interested in all aspects of theoretical physics.
+I did my PhD in [Dr. Christian Reichardt's](https://pursuit.unimelb.edu.au/individuals/associate-professor-christian-reichardt) [Observational Cosmology](http://www.ph.unimelb.edu.au/~creichardt/obscos/Welcome.html) group with the [South Pole Telescope](https://pole.uchicago.edu/public/Home.html) collaboration at the University of Melbourne. I worked on topics related to the [Cosmic Microwave Background](https://en.wikipedia.org/wiki/Cosmic_microwave_background). I am generally interested in all aspects of theoretical physics.
 
 I moved out from academia into the world of Photonics Design. I am developing an open source GPU accelerated Electromagnetic simulation software.
 
-Previously, I was at the [Physical Research Laboratory]("https://www.prl.res.in/prl-eng/"), Ahmedabad, where I worked with Prof. Subhendra Mohanty on cosmological models of self-interacting dark matter and soft graviton theorems.
-I did my Masters in Physics from the University of Trento in the SISSA/Trento Joint Masters Program where I did my thesis work with [Dr. Marco Raveri]("https://marcoraveri.com/") and Prof. [Carlo Baccigaluppi]("https://www.sissa.it/ap/members.php?ID=94") on theories of modified gravity.
+Previously, I was at the [Physical Research Laboratory](https://www.prl.res.in/prl-eng/), Ahmedabad, where I worked with Prof. Subhendra Mohanty on cosmological models of self-interacting dark matter and soft graviton theorems.
+I did my Masters in Physics from the University of Trento in the SISSA/Trento Joint Masters Program where I did my thesis work with [Dr. Marco Raveri](https://marcoraveri.com/) and Prof. [Carlo Baccigaluppi](https://www.sissa.it/ap/members.php?ID=94) on theories of modified gravity.
 
 Besides Physics, I am also interested in machine learning, statistics, and related things. I occasionally write blogs on these topics. Please have a look below.
 
