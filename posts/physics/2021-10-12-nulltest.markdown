@@ -1,0 +1,73 @@
+---
+layout: post
+title: How does the South Pole Telescope enure that they see the CMB ?
+author: prakrut
+date: 2021-10-12 10:34:30 +1100
+categories: [Physics, CMB]
+tags: [SPT, CMB, maps]
+math : true
+mermaid: true
+---
+The South Pole Telescope (SPT) aims to observe the oldest light in the Universe, the Cosmic Microwave Background (CMB).
+However, the observations of the sky from SPT are contaminated by various kinds of noise such as the atmospheric noise,
+detector noise, etc. Noise can be interpreted as a signal in the later stages of the analysis and therefore it is
+necessary to ensure 
+the maps are required to pass some null tests. These null tests hinge upon the
+assumption that the signal in the sky is constant but the noise varies with time. Hence, differencing two similar
+observations should remove the signal and the resultant map should contain only noise which should be consistent with
+null signal. 
+
+We have used two vaguely defined concepts, namely, '_similar observations_' and '_consistency with null signal_'
+which we will define more formally in the rest of the post.
+
+The SPT-3G instrument made 562 subfield observations. From these observations, we construct partial-depth full-field
+maps, which are called _bundles_. These bundles are constructed by chronologically coadding observations within each
+subfield untill the combined unpolzarized weight approaches $1/(N_{bundles})$ of the unpolzarized weight in the full
+season coadd. Typically around 100 bundles are constructed and each bundle has 3-5 observations.
+For SPT-3G, we perform the following types of null tests:
+1. **Sun**;
+2. **Moon**;
+3. **Azimuth**;
+4. **Left-right**;
+5. **Chronological.**
+
+While this list of null tests is not exhaustive and other null tests such as wafer and saturation null tests have been
+done in the past[^ref1], we do not do those here. Let us explore each of these tests.
+
+# Types of null tests
+## Sun 
+The Sun tests can be done in two ways, namely, with or without rebundling. The case without rebundling is teh simplest
+as it only requires sorting the already constructed bundles. The bundles are sorted according to either the mean or
+median of the Sun declination value of the observations that go into the making each bundle.
+
+When rebundling of observations is allowed, then this can be done in further two ways. The bundles can be made based on
+observation times or declination of the Sun. For bundling based on observation time, the observations are sorted
+according to **blah** while for declination based rebundling, the observations are bundled according to **blah**.
+```mermaid
+flowchart TD;
+    A(Gather information)-->B{Allow Rebundling?};
+    B-->|No|C(sort bundles by the median of each bundle's Sun declination);
+    B-->|Yes|D{Rebundling by which index?}
+    D-->E(Obs ID / Timestamp)
+    D-->F(Dec of the Sun)
+    E-->G{Split point}
+    F-->G
+    G-->|Horizon|I(Split observations according to whether Sun was above or below the horizon)
+    G-->|None|H(Split weights evenly between bundles)
+```
+## Moon
+The Moon null tests are exactly identical to the Sun null tests described above, except that these depend upon the
+position of the Moon instead of the Sun.
+
+## Azimuth
+
+## Left-Right
+
+## Chronological
+
+# Passing Criteria
+
+
+### References:
+[^ref1]: [Dutcher. et al](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.104.022003)
+

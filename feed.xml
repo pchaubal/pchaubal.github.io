@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:media="http://search.yahoo.com/mrss/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:georss="http://www.georss.org/georss">
+
+  <channel>
+    <title>
+      <![CDATA[  Prakrut&#39;s Blog  ]]>
+    </title>
+    <link> https://pchaubal.github.io/ </link>
+    <description>
+      <![CDATA[  A blog about Physics, computers, and interesting things  ]]>
+    </description>
+    <atom:link
+      href="https://pchaubal.github.io/feed.xml"
+      rel="self"
+      type="application/rss+xml" />
+
+
+<item>
+  <title>
+    <![CDATA[  Contact  ]]>
+  </title>
+  <link> https://pchaubal.github.io/contact/index.html </link>
+  <guid> https://pchaubal.github.io/contact/index.html </guid>
+  <description>
+    <![CDATA[  Contact information  ]]>
+  </description>  
+    
+  <pubDate>Sat, 19 Jul 2025 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Prakrut Chaubal</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  A Collection of Important Resources for Job hunt  ]]>
+  </title>
+  <link> https://pchaubal.github.io/posts/curatedlists/job-resources/index.html </link>
+  <guid> https://pchaubal.github.io/posts/curatedlists/job-resources/index.html </guid>
+  <description>
+    <![CDATA[  This is a list of some job resources that might be important for me in the future, and maybe for you too  ]]>
+  </description>  
+    
+  <pubDate>Thu, 10 Oct 2024 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Prakrut Chaubal</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  A New Formulation of Cosmological Perturbation Theory  ]]>
+  </title>
+  <link> https://pchaubal.github.io/posts/physics/cosmopertIE/index.html </link>
+  <guid> https://pchaubal.github.io/posts/physics/cosmopertIE/index.html </guid>
+  <description>
+    <![CDATA[  information  ]]>
+  </description>  
+    
+  <pubDate>Tue, 30 May 2023 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Prakrut Chaubal</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  How I setup my Raspberry-pi  ]]>
+  </title>
+  <link> https://pchaubal.github.io/posts/computers/raspberrypi-setup/index.html </link>
+  <guid> https://pchaubal.github.io/posts/computers/raspberrypi-setup/index.html </guid>
+  <description>
+    <![CDATA[  This is a list of some interesting resources that I came across while browsing the internet  ]]>
+  </description>  
+    
+  <pubDate>Sat, 16 Apr 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Prakrut Chaubal</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Computers, Codes and Programming  ]]>
+  </title>
+  <link> https://pchaubal.github.io/posts/curated-list/index.html </link>
+  <guid> https://pchaubal.github.io/posts/curated-list/index.html </guid>
+  <description>
+    <![CDATA[  This is a list of some interesting resources that I came across while browsing the internet  ]]>
+  </description>  
+    
+  <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Prakrut Chaubal</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  More goodies  ]]>
+  </title>
+  <link>  </link>
+  <guid>  </guid>
+  <description>
+    <![CDATA[  A short description of the page which would serve as <strong>blurb</strong> in a <code>RSS</code> feed; you can use basic markdown here but the whole description string must be a single line &#40;not a multiline string&#41;. Like this one for instance. Keep in mind that styling is minimal in RSS so for instance don&#39;t expect maths or fancy styling to work; images should be ok though: <img src="https://upload.wikimedia.org/wikipedia/en/b/b0/Rick_and_Morty_characters.jpg" alt="" />  ]]>
+  </description>  
+    
+  <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Prakrut Chaubal</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Code blocks  ]]>
+  </title>
+  <link> https://pchaubal.github.io/menu1/index.html </link>
+  <guid> https://pchaubal.github.io/menu1/index.html </guid>
+  <description>
+    <![CDATA[  A short description of the page which would serve as <strong>blurb</strong> in a <code>RSS</code> feed; you can use basic markdown here but the whole description string must be a single line &#40;not a multiline string&#41;. Like this one for instance. Keep in mind that styling is minimal in RSS so for instance don&#39;t expect maths or fancy styling to work; images should be ok though: <img src="https://upload.wikimedia.org/wikipedia/en/3/32/Rick_and_Morty_opening_credits.jpeg" alt="" />  ]]>
+  </description>  
+    
+  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Prakrut Chaubal</atom:name>
+  </atom:author>
+        
+</item>
+</channel></rss>

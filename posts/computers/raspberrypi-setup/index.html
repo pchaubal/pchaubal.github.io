@@ -1,0 +1,71 @@
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/styles/github.min.css"> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/tufte.css"> <link rel=stylesheet  href="/css/latex.css"> <link rel=stylesheet  href="/css/adjust.css"> <link rel=icon  href="/assets/favicon.png"> <title>How I setup my Raspberry-pi</title> <div id=layout > <div id=menu > <ul> <li><a href="/">Home</a> <li><a href="/posts/blog_index/">Blog</a> <li><a href="/projects/">Projects</a> <li><a href="/about/">About</a> <li><a href="/contact/">Contact</a> </ul> </div> <div id=main > <div class=franklin-content > <h1 id=password-less_login_with_ssh-keys ><a href="#password-less_login_with_ssh-keys" class=header-anchor >Password-less login with ssh-keys</a></h1> <p>I prefer installing Ubuntu 21 LTS server edition on my Rpi simply because it is easier to install a lot of software packages and to find support for other basic problems over the internet. I will assume you have etched the image onto the raspberry-pi and you can remotely ssh into your device.</p> <p>It is annoying to type my password everytime I want to login to the device. So I enable auto-login with ssh-keys. To do this, ssh has an inbuilt tool called ssh-copy-id which copies your public key to the .ssh directory of the remote device.</p> <pre><code class="console hljs"><span class="hljs-meta prompt_">$ </span><span class=language-bash >ssh-copy-id username@remote_host</span></code></pre>
+<p>This will prompt for a password and close the connection after copying the keys. If successful, the next login does not ask for a password. </p>
+<p>I also disable password authentication to reduce the risk of someone being able to log in to my device by guessing the password when I open the device to the internet. To do this I open the <code>/etc/ssh/sshd_config</code> file and set</p>
+<pre><code class="console hljs">PasswordAuthentication no</code></pre>
+<p>and then restart the ssh service through systemd with </p>
+<h1 id=change_default_shell_to_bash ><a href="#change_default_shell_to_bash" class=header-anchor >Change default shell to <code>bash</code></a></h1>
+<pre><code class="console hljs">chsh</code></pre>
+<pre><code class="console hljs"><span class="hljs-meta prompt_">$ </span><span class=language-bash ><span class=hljs-built_in >sudo</span> systemctl restart ssh</span></code></pre>
+<h1 id=btop_for_monitoring_the_system ><a href="#btop_for_monitoring_the_system" class=header-anchor ><em>btop</em> for monitoring the system</a></h1>
+<p>I really like the visual candy that btop provides over htop and so it is one of the first things I install.  The latest release version can be downloaded from the github repo under the <code>releases</code> page. Make sure to download the <code>arm-linux</code> version with</p>
+<pre><code class="console hljs"><span class="hljs-meta prompt_">$ </span><span class=language-bash >wget &lt;link_to_github_linux_arm_downloads&gt;</span></code></pre>
+<p>This gives a <code>.tbz</code> file which needs <code>bzip2</code> to extract it. <code>bzip2</code> can be installed with </p>
+<pre><code class="console hljs"><span class="hljs-meta prompt_">$ </span><span class=language-bash ><span class=hljs-built_in >sudo</span> apt-get install bzip2</span>
+<span class="hljs-meta prompt_">$ </span><span class=language-bash >bzip2 -d &lt;filename.tbz&gt;</span>
+<span class="hljs-meta prompt_">$ </span><span class=language-bash ><span class=hljs-built_in >mkdir</span> btop</span>
+<span class="hljs-meta prompt_">$ </span><span class=language-bash >tar -xvf &lt;filename.tar&gt; -C btop</span></code></pre>
+<p><code>btop</code> can now be run by running the executable <code>btop/bin/btop</code>. To make sure it is available everywhere and to all users, I copy it to my <code>/usr/bin</code> directory with </p>
+<pre><code class="console hljs"><span class="hljs-meta prompt_">$ </span><span class=language-bash ><span class=hljs-built_in >sudo</span> <span class=hljs-built_in >cp</span> btop/bin/btop /usr/bin</span></code></pre>
+<h1 id=miniconda ><a href="#miniconda" class=header-anchor >Miniconda</a></h1>
+<p>Conda does not currently provide <code>arm/aarch</code> pre-built binaries. However, the <code>conda-forge</code> packages work. Download the <code>aarch</code> package from <a href="https://github.com/conda-forge/miniforge/#download">https://github.com/conda-forge/miniforge/#download</a>.</p>
+<h1 id=make_new_users ><a href="#make_new_users" class=header-anchor >Make new users</a></h1>
+<p>To make a new user in Linux, the syntax is </p>
+<pre><code class="console hljs">sudo useradd -m username</code></pre>
+<p>This creates a new user with default settings defined in <code>/etc/default/useradd</code>. The <code>m</code> flag creates a home directory for the user. We don&#39;&#39;t want to give admin rights to all the users. To do this we can create groups such that users of each group have a limited set of predefined privileges. A new group with name <code>groupname</code> is created with </p>
+<pre><code class="console hljs">sudo groupadd groupname</code></pre>
+<p>We can then add new users to this group with </p>
+<pre><code class="console hljs">sudo usermed -a groupname username</code></pre>
+<p>Finally, to allow them access to the device with ssh-keys, make a <code>.ssh</code> directory in their home directory and add their public key to the <code>authorized_keys</code> file. This directory is created by the root user and will not have proper permissions. Set the correct permissions with </p>
+<pre><code class="console hljs">sudo chmod 700 /home/username/.ssh
+sudo chmod 600 /home/username/.ssh/authorized_keys</code></pre>
+<p>and then change the ownership of the <code>.ssh</code> and all its contents recursively with</p>
+<pre><code class="console hljs">sudo chown -R username:group /home/user/username/.ssh</code></pre>
+<p>Now your new user can sign-in to your device with their ssh key.</p>
+<h1 id=mount_drives ><a href="#mount_drives" class=header-anchor >Mount drives</a></h1>
+<p>To mount a drive, first make a new directory where the drive will be mounted. I prefer to make it in the top level directory.</p>
+<pre><code class="console hljs">sudo mkdir /drive1</code></pre>
+<p>Then, find the name of the drive with <code>lsblk</code>.  Finally, mount it with</p>
+<pre><code class="console hljs">sudo mount -t ext4 /dev/sda1 /drive1/</code></pre>
+<p>To mount the drive at boot, find its uuid with <code>sudo blkid</code>. Then add the following line to <code>/etc/fstab</code>:</p>
+<pre><code class="console hljs">UUID=&lt;uuid&gt; &lt;pathtomount&gt; &lt;filesystem&gt; defaults 0 0</code></pre>
+<h1 id=neovim ><a href="#neovim" class=header-anchor >Neovim</a></h1>
+<pre><code class="console hljs"><span class="hljs-meta prompt_">$ </span><span class=language-bash ><span class=hljs-built_in >sudo</span> add-apt-repository ppa:neovim-ppa/unstable</span>
+<span class="hljs-meta prompt_"> $ </span><span class=language-bash ><span class=hljs-built_in >sudo</span> apt install neovim</span></code></pre>
+<h1 id=wireguard ><a href="#wireguard" class=header-anchor >Wireguard</a></h1>
+<pre><code class="console hljs">sudo apt install wireguard</code></pre>
+<h1 id=increase_swap ><a href="#increase_swap" class=header-anchor >Increase swap</a></h1>
+<pre><code class="console hljs"><span class="hljs-meta prompt_"># </span><span class=language-bash >Turn swap off</span>
+<span class="hljs-meta prompt_"># </span><span class=language-bash >This moves stuff <span class=hljs-keyword >in</span> swap to the main memory and might take several minutes</span>
+sudo swapoff -a
+<span class="hljs-meta prompt_">
+# </span><span class=language-bash >Create an empty swapfile</span>
+<span class="hljs-meta prompt_"># </span><span class=language-bash >Note that <span class=hljs-string >&quot;1G&quot;</span> is basically just the unit and count is an <span class=hljs-built_in >integer</span>.</span>
+<span class="hljs-meta prompt_"># </span><span class=language-bash >Together, they define the size. In this <span class=hljs-keyword >case</span> 8GB.</span>
+sudo dd if=/dev/zero of=/swapfile bs=1G count=8
+<span class="hljs-meta prompt_"># </span><span class=language-bash >Set the correct permissions</span>
+sudo chmod 0600 /swapfile
+
+sudo mkswap /swapfile  # Set up a Linux swap area
+sudo swapon /swapfile  # Turn the swap on</code></pre>
+<p>Add <code>/swapfile swap swap sw 0 0</code> to your <code>/etc/fstab</code> to make it load at boot.</p>
+<div class=page-foot >
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Prakrut Chaubal. Last modified: July 23, 2025.
+    Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+</div>
+</div>
+        </div> 
+    </div> 
+    
+    
+        <script src="/libs/highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();hljs.configure({tabReplace: '    '});</script>
