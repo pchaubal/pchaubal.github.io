@@ -1,4 +1,16 @@
 /* adjustments for Franklin */
+/* Reset the counter only once at the top-level */
+html {
+  counter-reset: eqnum;
+}
+
+/* Make KaTeX displays increment sequentially */
+.katex-display::after {
+  counter-increment: eqnum;
+  content: "(" counter(eqnum) ")";
+  float: right;
+  padding-right: 5px;
+}
 
 
 /* my Additional adjustments */
@@ -21,16 +33,28 @@ body {
 /*   text-shadow: none; */
 /* } */
 
-a:link {
-  text-decoration: none;
-  /* background: linear-gradient(#111, #111), linear-gradient(#111, #111), linear-gradient(#ccc, #ccc); */
-  background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  text-shadow: 0.03em 0 #111, -0.03em 0 #111, 0 0.03em #111, 0 -0.03em #111,
-               0.06em 0 #111, -0.06em 0 #111, 0.09em 0 #111, -0.09em 0 #111,
-               0.12em 0 #111, -0.12em 0 #111, 0.15em 0 #111, -0.15em 0 #111;
-  background-position: 0% 93%, 100% 93%, 0% 93%;
+.franklin-content a,
+a:link,
+a:visited {
+  background: none !important;
+  text-shadow: none !important;
+  text-decoration: underline;
+  text-decoration-color: #ccc;  /* your highlight color */
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
+
+
+/* a:link { */
+/*   text-decoration: none; */
+/*   /* background: linear-gradient(#111, #111), linear-gradient(#111, #111), linear-gradient(#ccc, #ccc); */ */
+/*   background-size: 0.05em 1px, 0.05em 1px, 1px 1px; */
+/*   background-repeat: no-repeat, no-repeat, repeat-x; */
+/*   text-shadow: 0.03em 0 #111, -0.03em 0 #111, 0 0.03em #111, 0 -0.03em #111, */
+/*                0.06em 0 #111, -0.06em 0 #111, 0.09em 0 #111, -0.09em 0 #111, */
+/*                0.12em 0 #111, -0.12em 0 #111, 0.15em 0 #111, -0.15em 0 #111; */
+/*   background-position: 0% 93%, 100% 93%, 0% 93%; */
+/* } */
 
 a:link::selection,
 a:link::-moz-selection {
@@ -141,9 +165,9 @@ hr {
     width: 100px;
     text-align: right;
   }
-  .franklin-content { width: 600px; }
+  .franklin-content { width: 700px; }
 }
 
 @media (min-width: 1000px) {
-  .franklin-content { width: 660px; }
+  .franklin-content { width: 770px; }
 }
