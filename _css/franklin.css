@@ -3,9 +3,8 @@
 ================================================================== */
 
 :root {
-  --block-background: hsl(0, 0%, 94%);
   --output-background: hsl(0, 0%, 98%);
-  --small: 14px;
+  --small: 16px;
   --normal: 19px;
   --text-color: hsv(0, 0%, 20%);
 }
@@ -107,9 +106,9 @@ html {
     TITLES
 ================================================================== */
 
-.franklin-content h1 { font-size: 24px; }
-.franklin-content h2 { font-size: 22px; }
-.franklin-content h3 { font-size: 20px; }
+.franklin-content h1 { font-size: 45px; }
+.franklin-content h2 { font-size: 36px; }
+.franklin-content h3 { font-size: 32px; }
 
 .franklin-content h1,
 h2,
@@ -123,8 +122,8 @@ h6 {
 .franklin-content h1 {
   padding-bottom: 0.5em;
   border-bottom: 3px double lightgrey;
-  margin-top: 1.5em;
-  margin-bottom: 1em;
+  margin-top: 2.5em;
+  margin-bottom: 1.0em;
 }
 
 .franklin-content h2 {
@@ -134,17 +133,17 @@ h6 {
   margin-bottom: 1em;
 }
 
-.franklin-content h1 a { color: inherit; }
+.franklin-content h1 a { color: inherit; text-decoration: none; }
 .franklin-content h1 a:hover { text-decoration: none; }
-.franklin-content h2 a { color: inherit; }
+.franklin-content h2 a { color: inherit; text-decoration: none;  }
 .franklin-content h2 a:hover { text-decoration: none; }
-.franklin-content h3 a { color: inherit; }
+.franklin-content h3 a { color: inherit; text-decoration: none;  }
 .franklin-content h3 a:hover { text-decoration: none; }
-.franklin-content h4 a { color: inherit; }
+.franklin-content h4 a { color: inherit; text-decoration: none;  }
 .franklin-content h4 a:hover { text-decoration: none; }
-.franklin-content h5 a { color: inherit; }
+.franklin-content h5 a { color: inherit; text-decoration: none;  }
 .franklin-content h5 a:hover { text-decoration: none; }
-.franklin-content h6 a { color: inherit; }
+.franklin-content h6 a { color: inherit; text-decoration: none;  }
 .franklin-content h6 a:hover { text-decoration: none; }
 
 .franklin-content table {
@@ -256,7 +255,6 @@ td {
     KATEX
 ================================================================== */
 
-body { counter-reset: eqnum; }
 
 .katex { font-size: 1em !important; }
 
@@ -274,11 +272,6 @@ body { counter-reset: eqnum; }
   position: relative;
   float: right;
   padding-right: 5px;
-}
-
-.nonumber .katex-display::after {
-  counter-increment: nothing;
-  content: "";
 }
 
 /* ==================================================================
@@ -303,6 +296,7 @@ code {
 /* font-size: 90%; } */
 
 .hljs {
+  background: var(--block-background);
   font-size: var(--small);
   line-height: 1.35em;
   border-radius: 10px;

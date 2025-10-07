@@ -1,23 +1,16 @@
 /* adjustments for Franklin */
 /* Reset the counter only once at the top-level */
+
 html {
   counter-reset: eqnum;
 }
 
-/* Make KaTeX displays increment sequentially */
-.katex-display::after {
-  counter-increment: eqnum;
-  content: "(" counter(eqnum) ")";
-  float: right;
-  padding-right: 5px;
-}
-
-
 /* my Additional adjustments */
 :root {
   --color-bg: #121212;
+  --block-background: #212020;
 /*   --color-surface: #1E1E1E; */
-  --color-text: #E0E0E0;
+  --text-color: #A0A0A0;
 /*   --color-text-secondary: #A0A0A0; */
 /*   --color-primary: #4FC3F7; */
 /*   --color-primary-hover: #81D4FA; */
@@ -29,12 +22,27 @@ body {
   color: var(--color-text);
 }
 
+.franklin-content {
+  word-spacing: 0.15em;  /* try 0.1em–0.25em */
+}
+
+.franklin-content {
+  line-height: 3.0;   /* 1.4–1.8 is a good range for readability */
+}
+
+.franklin-content p {
+  line-height: 1.3;
+  text-align: justify;
+}
+
 /* a:link{ */
 /*   text-shadow: none; */
 /* } */
 
+
+
 .franklin-content a,
-a:link,
+a:link ,
 a:visited {
   background: none !important;
   text-shadow: none !important;
@@ -56,27 +64,23 @@ a:visited {
 /*   background-position: 0% 93%, 100% 93%, 0% 93%; */
 /* } */
 
-a:link::selection,
-a:link::-moz-selection {
-  text-shadow: 0.03em 0 #555, -0.03em 0 #555, 0 0.03em #555, 0 -0.03em #555;
-  background: #555; /* or any other accent color */
-}
+/* a:link::selection, */
+/* a:link::-moz-selection { */
+/*   text-shadow: 0.03em 0 #555, -0.03em 0 #555, 0 0.03em #555, 0 -0.03em #555; */
+/*   background: #555; /* or any other accent color */ */
+/* } */
 
 hr {
   border-top: 1px solid #555; /* was #ccc */
 }
 
-.franklin-content code {
-  font-size: clamp(12px, 12px + 0.5vw, 5vw);
-  /* font-size: var(--small); */
-}
 
 /* my Additional adjustments */
 .franklin-content { font-size: 1.4rem; }
 
-.franklin-content a:hover {
-  text-decoration: none;
-}
+/* .franklin-content a:hover { */
+/*   text-decoration: none; */
+/* } */
 
 #main {
   float: left;
@@ -165,9 +169,33 @@ hr {
     width: 100px;
     text-align: right;
   }
-  .franklin-content { width: 700px; }
+  .franklin-content { width: 850px; }
 }
 
-@media (min-width: 1000px) {
-  .franklin-content { width: 770px; }
+.hljs { background: var(--block-background); color: #369; }
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-title {
+  color: #005cc5; /* blue for keywords */
 }
+
+.hljs-string,
+.hljs-number,
+.hljs-literal {
+  color: #b58900; /* golden for literals/strings */
+}
+
+.hljs-comment {
+  color: #999;
+  font-style: italic;
+}
+
+.hljs-function .hljs-title {
+  color: #268bd2;
+}
+
+
+/* @media (min-width: 1000px) { */
+/*   .franklin-content { width: 850px; } */
+/* } */
