@@ -10,7 +10,7 @@ html {
   --color-bg: #121212;
   --block-background: #212020;
 /*   --color-surface: #1E1E1E; */
-  --text-color: #A0A0A0;
+  --text-color: #FFFFFF;
 /*   --color-text-secondary: #A0A0A0; */
 /*   --color-primary: #4FC3F7; */
 /*   --color-primary-hover: #81D4FA; */
@@ -169,7 +169,7 @@ hr {
     width: 100px;
     text-align: right;
   }
-  .franklin-content { width: 850px; }
+  .franklin-content { width: 940px; }
 }
 
 .hljs { background: var(--block-background); color: #369; }

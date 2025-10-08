@@ -173,22 +173,22 @@ figure {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  max-width: 75%;
+  max-width: 95%;
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
-  margin: 0 0 3em 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 figcaption {
-  float: right;
-  clear: right;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 1.1rem;
   line-height: 1.6;
   vertical-align: baseline;
   position: relative;
-  max-width: 60%;
+  max-width: 65%;
+  margin-left: 17.5%;
 }
 
 figure.fullwidth figcaption { margin-right: 24%; }
